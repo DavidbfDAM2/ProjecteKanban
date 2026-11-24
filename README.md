@@ -4,10 +4,11 @@ Projecte intermodular de 2n de DAM per desenvolupar una aplicació de gestió de
 
 ## Equip
 
-- David Baños Fàbregas.
-- Isaac Martinez Boada.
+- David Baños Fàbregas
+- Isaac Martinez Boada
+- Ivan Pérez López
 
-Tots dos participem en l’anàlisi, el disseny, la implementació, les proves i la documentació.
+Tots tres participem en l’anàlisi, el disseny, la implementació, les proves i la documentació.
 
 ## Tecnologies previstes
 
@@ -37,7 +38,8 @@ ProjecteKanban/
 │   │   └── memoria-pdf-css/     # Plugin d’exportació a PDF
 │   └── community-plugins.json  # Llista de plugins comunitaris
 ├── documentacio/
-│   └── memoria-pdf.css         # Estil dels documents exportats
+│   ├── memoria-pdf.css         # Estil dels documents exportats
+│   └── imatges/                # Imatges per documents
 ├── .gitignore
 └── README.md
 ```
@@ -56,7 +58,7 @@ Els documents de lliurament s’exportaran a PDF.
 
 ## Organització
 
-Equip de dues persones, amb metodologia Scrum i seguiment a Jira.
+Equip de tres persones, amb metodologia Scrum i seguiment a Jira.
 Les proves i la documentació s’actualitzaran durant cada sprint.
 
 ## Planificació i seguiment
