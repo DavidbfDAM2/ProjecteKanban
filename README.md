@@ -37,9 +37,16 @@ ProjecteKanban/
 │   ├── plugins/
 │   │   └── memoria-pdf-css/     # Plugin d’exportació a PDF
 │   └── community-plugins.json  # Llista de plugins comunitaris
+│
 ├── documentacio/
 │   ├── memoria-pdf.css         # Estil dels documents exportats
 │   └── imatges/                # Imatges per documents
+│
+├── src/
+│   ├── api/ 
+│   ├── app/     
+│   └── bbdd/  
+│
 ├── .gitignore
 └── README.md
 ```

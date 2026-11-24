@@ -25,16 +25,16 @@ Definir classes principals i pensar taules BBDD
 
 ## BBDD
 
-| **Usuari**  | **Projecte**   | **Columna**    | **Tasca**                | **ProjecteMembre**     |
+| **Usuari**  | **Projecte**   | **Columna**    | **Tasca**                | **ProjecteUsuari**     |
 | ----------- | -------------- | -------------- | ------------------------ | ---------------------- |
 | userId (PK) | projectId (PK) | columnId (PK)  | tascaId (PK)             | userId, projectId (PK) |
-| nomUser     | manager (FK)   | idProject (FK) | idColumn (FK)            |                        |
-| password    | nomProj        | nomColumn      | nomTasca                 |                        |
-|             | dataCreacio    |                | descripcio               |                        |
-|             | dataFinal      |                | dataCreacio              |                        |
+| nomUser     | idUser (FK)    | idProject (FK) | idColumn (FK)            |                        |
+| password    | nomProj        | nomColumn      | idUser (FK)              |                        |
+|             | dataCreacio    |                | nomTasca                 |                        |
+|             | dataFinal      |                | descripcio               |                        |
+|             | descripcio     |                | dataCreacio              |                        |
 |             |                |                | dataPrevistaFinalitzacio |                        |
 |             |                |                | dataRealFinalitzacio     |                        |
 |             |                |                | dataMod                  |                        |
-|             |                |                | responsable(userId)      |                        |
 |             |                |                | prioritat                |                        |
 *Esquema provisional de les taules de la BBDD*
