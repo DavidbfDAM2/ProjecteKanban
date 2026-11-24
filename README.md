@@ -74,7 +74,7 @@ ProjecteKanban/
 │   │           ├── MainWindow.xaml.cs
 │   │           └── ProjecteKanban.csproj
 │   │
-│   └── bbdd/                         # Reservada per a la base de dades
+│   └── database/                     # Reservada per a la base de dades
 │
 ├── .gitignore
 └── README.md
