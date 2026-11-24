@@ -12,7 +12,7 @@
 ### Ivan
 Prototip del disseny Kanban amb [Excalidraw](https://excalidraw.com/) 
 
-![[1rEsborrany.png]]
+![esborrany](/documentacio/imatges/1rEsborrany.png)
 ### David
 Gestió dels comptes de [Jira](https://daviddam2.atlassian.net/jira/software/projects/KBAN/boards/34/backlog) i [GitHub](https://github.com/DavidbfDAM2/ProjecteKanban)
 
