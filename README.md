@@ -4,13 +4,8 @@ Projecte intermodular de 2n de DAM per desenvolupar una aplicació de gestió de
 
 ## Equip
 
-<<<<<<< HEAD
 - David Baños Fàbregas
 - Isaac Martinez Boada
-=======
-- David Baños Fàbregas.
-- Isaac Martinez Boada.
->>>>>>> 4ded44d9034a00b03f495e5655268da643fab377
 - Ivan Pérez López
 
 Tots tres participem en l’anàlisi, el disseny, la implementació, les proves i la documentació.
