@@ -6,6 +6,7 @@ Projecte intermodular de 2n de DAM per desenvolupar una aplicació de gestió de
 
 - David Baños Fàbregas.
 - Isaac Martinez Boada.
+- Ivan Pérez López
 
 Tots dos participem en l’anàlisi, el disseny, la implementació, les proves i la documentació.
 
