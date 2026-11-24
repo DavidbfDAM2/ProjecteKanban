@@ -25,14 +25,16 @@ Definir classes principals i pensar taules BBDD
 
 ## BBDD
 
-| **Usuari**  | **Projecte**   | **Columna**    | **Tasca**           |
-| ----------- | -------------- | -------------- | ------------------- |
-| userId (PK) | projectId (PK) | columnId (PK)  | tascaId (PK)        |
-| nom         | Manager (FK)   | idProject (PK) | descripció          |
-| password    | nomProj        | nomColumn      | dataCreacio         |
-|             | dataCreacio    |                | dataFinal           |
-|             | dataFinal      |                | dataMod             |
-|             |                |                | responsable(userId) |
-|             |                |                | idColumn (FK)       |
-|             |                |                | prioritat           |
+| **Usuari**  | **Projecte**   | **Columna**    | **Tasca**                | **ProjecteMembre**     |
+| ----------- | -------------- | -------------- | ------------------------ | ---------------------- |
+| userId (PK) | projectId (PK) | columnId (PK)  | tascaId (PK)             | userId, projectId (PK) |
+| nomUser     | manager (FK)   | idProject (FK) | idColumn (FK)            |                        |
+| password    | nomProj        | nomColumn      | nomTasca                 |                        |
+|             | dataCreacio    |                | descripcio               |                        |
+|             | dataFinal      |                | dataCreacio              |                        |
+|             |                |                | dataPrevistaFinalitzacio |                        |
+|             |                |                | dataRealFinalitzacio     |                        |
+|             |                |                | dataMod                  |                        |
+|             |                |                | responsable(userId)      |                        |
+|             |                |                | prioritat                |                        |
 *Esquema provisional de les taules de la BBDD*
