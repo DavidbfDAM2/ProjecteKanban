@@ -35,17 +35,46 @@ no s’ha creat.
 ProjecteKanban/
 ├── .obsidian/
 │   ├── plugins/
-│   │   └── memoria-pdf-css/     # Plugin d’exportació a PDF
-│   └── community-plugins.json  # Llista de plugins comunitaris
+│   │   └── memoria-pdf-css/           # Plugin d’exportació a PDF
+│   │       ├── main.js
+│   │       ├── manifest.json
+│   │       ├── paged.js
+│   │       └── PAGED-LICENSE.md
+│   │
+│   └── community-plugins.json         # Llista de plugins comunitaris
 │
 ├── documentacio/
-│   ├── memoria-pdf.css         # Estil dels documents exportats
-│   └── imatges/                # Imatges per documents
+│   ├── imatges/
+│   │   └── 1rEsborrany.png            # Prototip visual
+│   │
+│   ├── memoria-pdf.css                # Estil dels documents exportats
+│   └── Sprint1.md                     # Planificació i disseny inicial
 │
 ├── src/
-│   ├── api/ 
-│   ├── app/     
-│   └── bbdd/  
+│   ├── api/                           # Reservada per a l’API
+│   ├── app/
+│   │   └── ProjecteKanban/
+│   │       ├── ProjecteKanban.slnx    # Solució de Visual Studio
+│   │       └── ProjecteKanban/
+│   │           ├── Classes/
+│   │           │   ├── Columna.cs
+│   │           │   ├── Projecte.cs
+│   │           │   ├── Tasca.cs
+│   │           │   └── Usuari.cs
+│   │           ├── Properties/
+│   │           │   ├── AssemblyInfo.cs
+│   │           │   ├── Resources.Designer.cs
+│   │           │   ├── Resources.resx
+│   │           │   ├── Settings.Designer.cs
+│   │           │   └── Settings.settings
+│   │           ├── App.config
+│   │           ├── App.xaml
+│   │           ├── App.xaml.cs
+│   │           ├── MainWindow.xaml
+│   │           ├── MainWindow.xaml.cs
+│   │           └── ProjecteKanban.csproj
+│   │
+│   └── bbdd/                         # Reservada per a la base de dades
 │
 ├── .gitignore
 └── README.md
