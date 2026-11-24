@@ -8,6 +8,8 @@
 - [ ] Definir l'organització modular del projecte
 - [ ] Fer el prototip del formulari de tasques
 - [ ] Fer el prototip de la gestió de responsables
+- [ ] Creació projecte WPF
+- [ ] Creació BBDD SQL
 ## Planificació i repartició de les tasques:
 ### Ivan
 Prototip del disseny Kanban amb [Excalidraw](https://excalidraw.com/) 
