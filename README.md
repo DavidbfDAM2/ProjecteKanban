@@ -21,9 +21,9 @@ Tots tres participem en l’anàlisi, el disseny, la implementació, les proves 
 
 ## Estat actual
 
-Ja tenim el projecte d’escriptori creat en C# amb WPF i les classes bàsiques del model: `Projecte`, `Columna`, `Tasca` i `Usuari`. També disposem d’un prototip visual del tauler i d’un esquema inicial de MySQL, encara no connectat a l’aplicació.
+Ja tenim les classes bàsiques del model (`Projecte`, `Columna`, `Tasca` i `Usuari`) i una primera vista del tauler en WPF. La vista mostra les columnes `ToDo`, `Doing` i `Done`, amb una targeta de prova a `ToDo`. De moment, el contingut és estàtic i els botons **+** encara no permeten crear tasques.
 
-El següent pas és implementar la primera vista del tauler amb les columnes `ToDo`, `Doing` i `Done`, i mostrar-hi una tasca de prova. Després hi afegirem el moviment de targetes i la persistència local de les dades.
+El pas següent és connectar la vista amb el model: mostrar una `Tasca` creada en memòria a la columna que correspon al seu `IdColumna`. Després hi afegirem la creació i el moviment de targetes i la persistència local de les dades. L’esquema MySQL ja està definit, però encara no està connectat a l’aplicació.
 
 ## Com obrir el projecte
 
@@ -42,10 +42,10 @@ ProjecteKanban/
 │   │       └── PAGED-LICENSE.md
 │   │
 │   └── community-plugins.json
-│
 ├── documentacio/
 │   ├── imatges/
 │   │   └── 1rEsborrany.png            # Prototip visual del tauler
+│   │
 │   ├── memoria-pdf.css
 │   └── Sprint1.md
 │
@@ -59,23 +59,27 @@ ProjecteKanban/
 │   │           │   ├── Projecte.cs
 │   │           │   ├── Tasca.cs
 │   │           │   └── Usuari.cs
+│   │           │
 │   │           ├── Properties/
 │   │           │   ├── AssemblyInfo.cs
 │   │           │   ├── Resources.Designer.cs
 │   │           │   ├── Resources.resx
 │   │           │   ├── Settings.Designer.cs
 │   │           │   └── Settings.settings
+│   │           │
+│   │           ├── Views/
+│   │           │   ├── TaulerView.xaml      # Primera vista del tauler
+│   │           │   └── TaulerView.xaml.cs
+│   │           │
 │   │           ├── App.config
 │   │           ├── App.xaml
 │   │           ├── App.xaml.cs
-│   │           ├── MainWindow.xaml
+│   │           ├── MainWindow.xaml        # Finestra que carrega TaulerView
 │   │           ├── MainWindow.xaml.cs
 │   │           └── ProjecteKanban.csproj
-│   │
 │   └── database/
 │       ├── kanban.mwb                 # Model de MySQL Workbench
 │       └── schema.sql                 # Script de creació de la base de dades
-│
 ├── .gitignore
 └── README.md
 ```
@@ -85,12 +89,12 @@ Les configuracions personals d’Obsidian queden ignorades.
 
 ## Documentació
 
-La documentació del projecte es redacta amb Obsidian en format
-Markdown i es guarda a `documentacio/`.
+Ja es poden consultar:
 
-Inclourà l’anàlisi de requisits, els diagrames, els prototips,
-els informes dels sprints i els manuals d’usuari i d’instal·lació.
-Els documents de lliurament s’exportaran a PDF.
+- [Informe del Sprint 1](documentacio/Sprint1.md): planificació, repartiment de tasques i disseny inicial.
+- [Prototip visual del tauler](documentacio/imatges/1rEsborrany.png): primer esborrany de la interfície.
+
+A mesura que avanci el projecte, hi afegirem l’anàlisi de requisits, els diagrames de classes i de dades, els informes dels sprints següents i els manuals d’usuari i d’instal·lació. Els documents de lliurament s’exportaran a PDF.
 
 ## Organització
 
@@ -100,5 +104,5 @@ Les proves i la documentació s’actualitzaran durant cada sprint.
 ## Planificació i seguiment
 
 Gestió del Product Backlog i els sprints: 
-[Jira — ProjecteKanban](https://daviddam2.atlassian.net/jira/software/projects/KBAN/boards/34/backlog).
+- [Jira - ProjecteKanban](https://daviddam2.atlassian.net/jira/software/projects/KBAN/boards/34/backlog).
 L’accés requereix iniciar sessió amb un compte autoritzat.
