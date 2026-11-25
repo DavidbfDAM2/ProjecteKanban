@@ -1,0 +1,83 @@
+﻿<UserControl x:Class="ProjecteKanban.Views.TaulerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProjecteKanban.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    
+    <UserControl.Resources>
+        
+        <Style x:Key="EstilColumna" TargetType="Border">
+            <Setter Property="Background" Value="#A18172" />
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="Margin" Value="6,0" />
+            <Setter Property="Padding" Value="12" />
+        </Style>
+        
+        <Style x:Key="EstilTitolColumna" TargetType="TextBlock">
+            <Setter Property="Background" Value="#F5EFEC" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="TextAlignment" Value="Center" />
+        </Style>
+        
+        <Style x:Key="EstilBotoAfegir" TargetType="Button">
+            <Setter Property="Content" Value="+" />
+            <Setter Property="Width" Value="32" />
+            <Setter Property="Height" Value="28" />
+            <Setter Property="HorizontalAlignment" Value="Right" />
+        </Style>
+        
+    </UserControl.Resources>
+
+    <Grid Background="#E8EBED">
+        <Grid Margin="18">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Margin="6,0,6,14"
+                       Text="Projecte de prova"
+                       FontSize="22"
+                       FontWeight="SemiBold" />
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0" Style="{StaticResource EstilColumna}">
+                    <DockPanel>
+                        <Button DockPanel.Dock="Bottom" Style="{StaticResource EstilBotoAfegir}" />
+                        <TextBlock DockPanel.Dock="Top" Text="ToDo" Style="{StaticResource EstilTitolColumna}" />
+                        <StackPanel Margin="0,10">
+                            <Border Background="#F5EFEC" CornerRadius="6" Padding="10">
+                                <TextBlock Text="Tasca de prova" TextWrapping="Wrap" />
+                            </Border>
+                        </StackPanel>
+                    </DockPanel>
+                </Border>
+
+                <Border Grid.Column="1" Style="{StaticResource EstilColumna}">
+                    <DockPanel>
+                        <Button DockPanel.Dock="Bottom" Style="{StaticResource EstilBotoAfegir}" />
+                        <TextBlock DockPanel.Dock="Top" Text="Doing" Style="{StaticResource EstilTitolColumna}" />
+                        <StackPanel Margin="0,10" />
+                    </DockPanel>
+                </Border>
+
+                <Border Grid.Column="2" Style="{StaticResource EstilColumna}">
+                    <DockPanel>
+                        <Button DockPanel.Dock="Bottom" Style="{StaticResource EstilBotoAfegir}" />
+                        <TextBlock DockPanel.Dock="Top" Text="Done" Style="{StaticResource EstilTitolColumna}" />
+                        <StackPanel Margin="0,10" />
+                    </DockPanel>
+                </Border>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>
