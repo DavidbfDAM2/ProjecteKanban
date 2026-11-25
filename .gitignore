@@ -477,3 +477,6 @@ appsettings.local.json
 .env
 .env.*
 !.env.example
+
+# Còpies de seguretat de MySQL Workbench
+*.mwb.bak

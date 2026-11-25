@@ -14,20 +14,20 @@ Tots tres participem en l’anàlisi, el disseny, la implementació, les proves 
 
 - **C# i WPF amb Visual Studio:** aplicació d’escriptori per a Windows.
 - **Fitxers locals:** persistència inicial de les dades.
-- **API i SGBD:** ampliació posterior per accedir a una base de dades.
+- **MySQL i API:** l’esquema inicial de MySQL ja està definit. Més endavant, l’aplicació accedirà a la base de dades mitjançant una API.
 - **Obsidian, Markdown i CSS:** documentació i exportació a PDF.
 - **Jira:** planificació i seguiment amb sprints de dues setmanes.
 - **Git i GitHub:** control de versions i treball en equip.
 
 ## Estat actual
 
-El projecte es troba en fase de planificació. Disposem del repositori 
-GitHub, del Product Backlog inicial a Jira i de les eines per redactar
-i exportar la documentació amb Obsidian.
+Ja tenim el projecte d’escriptori creat en C# amb WPF i les classes bàsiques del model: `Projecte`, `Columna`, `Tasca` i `Usuari`. També disposem d’un prototip visual del tauler i d’un esquema inicial de MySQL, encara no connectat a l’aplicació.
 
-El següent pas és planificar el primer sprint, repartir les tasques
-i començar el disseny inicial de l’aplicació. El projecte WPF encara
-no s’ha creat.
+El següent pas és implementar la primera vista del tauler amb les columnes `ToDo`, `Doing` i `Done`, i mostrar-hi una tasca de prova. Després hi afegirem el moviment de targetes i la persistència local de les dades.
+
+## Com obrir el projecte
+
+Obriu [`ProjecteKanban.slnx`](src/app/ProjecteKanban/ProjecteKanban.slnx) amb Visual Studio a Windows. El projecte WPF està configurat per a **.NET Framework 4.7.2**.
 
 ## Estructura del projecte
 
@@ -41,17 +41,15 @@ ProjecteKanban/
 │   │       ├── paged.js
 │   │       └── PAGED-LICENSE.md
 │   │
-│   └── community-plugins.json         # Llista de plugins comunitaris
+│   └── community-plugins.json
 │
 ├── documentacio/
 │   ├── imatges/
-│   │   └── 1rEsborrany.png            # Prototip visual
-│   │
-│   ├── memoria-pdf.css                # Estil dels documents exportats
-│   └── Sprint1.md                     # Planificació i disseny inicial
+│   │   └── 1rEsborrany.png            # Prototip visual del tauler
+│   ├── memoria-pdf.css
+│   └── Sprint1.md
 │
 ├── src/
-│   ├── api/                           # Reservada per a l’API
 │   ├── app/
 │   │   └── ProjecteKanban/
 │   │       ├── ProjecteKanban.slnx    # Solució de Visual Studio
@@ -74,7 +72,9 @@ ProjecteKanban/
 │   │           ├── MainWindow.xaml.cs
 │   │           └── ProjecteKanban.csproj
 │   │
-│   └── database/                     # Reservada per a la base de dades
+│   └── database/
+│       ├── kanban.mwb                 # Model de MySQL Workbench
+│       └── schema.sql                 # Script de creació de la base de dades
 │
 ├── .gitignore
 └── README.md
