@@ -21,19 +21,17 @@ namespace ProjecteKanban.Classes
         public string NomUsuari 
         {
             get { return _nomUsuari; }
-        }
-               
+        }               
 
         // CONSTRUCTORS
-
         public Usuari (int usuariId, string nomUsuari) 
         {
             AssignarUsuariId(usuariId);
             AssignarNomUsuari(nomUsuari);
 
         }
-        // MÈTODES DE LA CLASSE
-        
+
+        // MÈTODES DE LA CLASSE        
         private void AssignarUsuariId(int usuariId) // Validem i guardem un ID positiu en crear l'usuari
         {
             if (usuariId <= 0)
